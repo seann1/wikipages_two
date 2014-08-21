@@ -1,15 +1,150 @@
-h1 {
-  color: blue;
+h1, #link{
+  color: #575757;
   font-size: 60px;
-  background-color: #D1D069;
+  transition: background .5s;
+  background-size: 40px 40px;
   border-style: solid;
-  border-width: 10px;
-  border-color: #6079DB;
-  border-radius: 20px;
+  border-width: 2px;
+  border-color: #575757;
+  width: 80%;
+  text-align: center;
+  font-family: font-to-use;
+  margin: 20px;
+
+}
+h1:hover {
+  color: black;
+  font-size: 60px;
+  background:url(zebra.jpg);
+  background-size: 7px 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  width: 80%;
+  text-align: center;
 }
 
 body {
-  background-color: #9E917A;
+  background-image: url('black-metal.jpg');
+  background-color: gray;
+  background-size: 2000px 1500px;
+  opacity: 0.9;
+  -webkit-filter: blur(0.5px);
+  border-style: solid;
+  border-width: 20px;
+  border-color: black;
+  height: 100%;
+}
+
+
+p {
+  color: orange;
+  font-size: 20px;
+}
+
+#phone {
+  background-color: #A3C9AB;
+  color: black;
+  font-size: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+}
+
+#email {
+  background-color: #A3C9AB;
+  color: black;
+  font-size: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+}
+
+
+#new {
+  background-color: #A70085;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  border-style: double;
+  border-color: black;
+  border-width: 10px;
+  background:url(zebra.jpg);
+  background-size: 7px 20px;
+}
+
+input {
+  background-color: #FFE387;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #DBFF0D;
+  font-size: 20px;
+  margin: 20px;
+}
+#success{
+  height: 100px;
+  width: 100px;
+  animation: success 3s infinite alternate;
+  -webkit-animation: success 3s infinite alternate;
+  font-size: 30px;
+
+}
+
+@keyframes success {
+    0% {background: red;
+      width: 100px;
+      height: 100px;}
+    50% {
+      background: #ADFFF0;
+      /*transform: rotate(20deg);*/
+    }
+    100% {background: yellow;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;}
+}
+
+@-webkit-keyframes success {
+    0% {background: red;
+      width: 100px;
+      height: 100px;}
+    50% {
+      background: #ADFFF0;
+      /*transform: rotate(20deg);*/
+    }
+    100% {background: yellow;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;}
+}
+
+@font-face {
+  font-family: font-to-use;
+  src: url(roboto-black.ttf);
+}
+
+#wrapper {
+  background:url(stars.jpg);
+  background-size: 100px 100px;
+}
+
+#footer {
+  height: 270px;
+  width: 100%;
+  background: url(sandman.jpg);
+  background-size: 30px 30px;
+  position: absolute;
+  top: 70%;
+  right: 100px;
+  left: 0px;
+  opacity: .5;
+
 }
 
 

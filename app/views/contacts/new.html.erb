@@ -1,3 +1,4 @@
+<div id="wrapper">
 <h1>New contact</h1>
 
 <% if @contact.errors.any? %>
@@ -9,7 +10,7 @@
   </ul>
 <% end %>
 
-<form action="/contacts" method="post">
+<form id="new" action="/contacts" method="post">
   <label for="contact-name">Name</label>
   <input id="contact_name" name="name" type="text" value="<%= @contact.name %>">
   <label for="contact-phone">Phone</label>
@@ -18,3 +19,6 @@
   <input id="contact_Email" name="email" type="text" value="<%= @contact.email %>">
   <button>Create Contact</button>
 </form>
+
+<a href="/contacts" id="link" >Return to contact listing</a>
+</div>
