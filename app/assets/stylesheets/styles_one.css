@@ -1,7 +1,7 @@
 h1, #link{
   color: #575757;
   font-size: 60px;
-  transition: background .5s;
+  transition: background .5s, color 2s;
   background-size: 40px 40px;
   border-style: solid;
   border-width: 2px;
@@ -13,9 +13,9 @@ h1, #link{
 
 }
 h1:hover {
-  color: black;
+  color: white;
   font-size: 60px;
-  background:url(zebra.jpg);
+  background:url(water.jpg);
   background-size: 7px 20px;
   border-style: solid;
   border-width: 2px;
@@ -45,10 +45,11 @@ p {
 #phone {
   background-color: #A3C9AB;
   color: black;
-  font-size: 20px;
+  font-size: 40px;
   border-width: 5px;
   border-style: solid;
   border-color: black;
+  transition: background-color 1s, border-radius 2s, color 3s;
 }
 
 #email {
@@ -60,12 +61,31 @@ p {
   border-color: black;
 }
 
+#phone:hover {
+  background-color: orange;
+  border-radius: 50%;
+  color: red;
+}
+
+#new_contact {
+  transition: background 1s, border-radius 1s, background-size 1s;
+  font-size: 60px;
+  width: 25%;
+
+}
+
+#new_contact:hover {
+  background:url(zebra.jpg);
+  background-size: 30px 10px;
+  border-radius: 50%;
+}
+
 
 #new {
   background-color: #A70085;
   color: black;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 80px;
   border-style: double;
   border-color: black;
   border-width: 10px;
@@ -138,7 +158,7 @@ button {
   height: 270px;
   width: 100%;
   background: url(sandman.jpg);
-  background-size: 30px 30px;
+  background-size: 200px 200px;
   position: absolute;
   top: 70%;
   right: 100px;
