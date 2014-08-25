@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   match('contacts/:contact_id/phones/new', {:via => :get, :to => 'phones#new'})
   match('contacts/:contact_id/phones', {:via => :post, :to => 'phones#create'})
   match('contacts/:id/phones/:id/edit', {:via => :get, :to => 'phones#edit'})
-  match('contacts/:id/phones/:id', {:via => [:patch, :put], :to => 'phones#update'})
+  match('contacts/:id/phones/:phone_id', {:via => [:patch, :put], :to => 'phones#update'})
+  match('contacts/:id/phones/:phone_id/destroy', {:via => :delete, :to => 'phones#destroy'})
 
 end

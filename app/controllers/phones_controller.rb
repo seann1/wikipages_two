@@ -16,19 +16,26 @@ class PhonesController < ApplicationController
     end
   end
 
-  def update
+  def edit
+    phone_id = request.original_url.split('/')[6].to_i
     @phone = Phone.find(params[:id])
+    render('phones/edit.html.erb')
+  end
 
-    if @phone.update(:number => params[:number])
-      render('/success.html.erb')
+  def update
+    # phone_id = request.original_url.split('/')[6].to_i
+    @phone = Phone.find(params[:phone_id])
+    if @phone.update(:number => params[:phone])
+      render('phones/success.html.erb')
     else
       render('phones/edit.html.erb')
     end
   end
 
-  def edit
-    @phone = Phone.find(params[:id])
-
-    render('phones/edit.html.erb')
+  def destroy
+    phone_id = request.original_url.split('/')[6].to_i
+    @phone = Phone.where(id: phone_id)
+    @phone.first.destroy
+    render('phones/destroy.html.erb')
   end
 end

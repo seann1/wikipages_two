@@ -9,9 +9,9 @@
   </ul>
 <% end %>
 
-<form action="/phones/<%= @phone.id %>" method="post">
+<form action="." method="post">
   <input name="_method" type="hidden" value="patch">
-  <label for="phone_number">New Number</label>
+  <label for="number">New Number</label>
   <input id="phone_number" name="phone" type="text" value="<%= @phone.number %>">
   <button>Press the button to add the phone number</button>
 </form>

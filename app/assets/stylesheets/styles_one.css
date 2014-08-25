@@ -25,7 +25,7 @@ h1:hover {
 }
 
 body {
-  background-image: url('black-metal.jpg');
+  /*background-image: url('black-metal.jpg');*/
   background-color: gray;
   background-size: 2000px 1500px;
   opacity: 0.9;
@@ -39,7 +39,7 @@ body {
 
 p {
   color: orange;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 #phone {
@@ -63,7 +63,7 @@ p {
 
 #new {
   background-color: #A70085;
-  color: white;
+  color: black;
   border-radius: 20px;
   font-size: 20px;
   border-style: double;
