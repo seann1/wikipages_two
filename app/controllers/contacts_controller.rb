@@ -10,9 +10,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(:name => params[:name],
-                            :phone => params[:phone],
-                            :email => params[:email])
+    @contact = Contact.new(:name => params[:name])
     if @contact.save
       render('contacts/success.html.erb')
     else
@@ -27,9 +25,7 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
-    if @contact.update(:name => params[:name],
-                       :email => params[:email],
-                       :phone => params[:phone])
+    if @contact.update(:name => params[:name])
       render('contacts/success.html.erb')
     else
       render('contacts/edit.html.erb')

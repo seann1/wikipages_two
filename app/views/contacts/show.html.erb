@@ -16,8 +16,21 @@
   <% end %>
 </ul>
 
-<p id="phone">Phone: <%= @contact.phone %></p>
-<p id="email">Email: <%= @contact.email %></p>
+<p>The following email addresses belong to this person in the address book........</p>
+
+<ul>
+<% @contact.emails.each do |email| %>
+  <li id="phone">
+    <%= email.address %> ++++
+      <a href="/contacts/<%= @contact.id %>/emails/<%= email.id%>/edit">Edit</a> ++++
+      <a href="/contacts/<%= @contact.id %>/emails/<%= email.id %>/destroy"
+          data-confirm="Are you sure that you want to save this email address the way that it is?"
+          data-method="delete"
+          rel="nofollow">Delete this thing</a>
+  </li>
+  <% end %>
+</ul>
+
 
 <p><a href="/contacts/<%= @contact.id %>/edit">Edit</a></p>
 <p><a href="/contacts/<%= @contact.id %>"
@@ -26,6 +39,7 @@
       rel="nofollow">Delete</a></p>
 
 <p><a href="/contacts/<%= @contact.id %>/phones/new">Add phone</a></p>
+<p><a href="/contacts/<%= @contact.id %>/emails/new">Add email</a></p>
 
 <a href="/contacts" id="link" >Return to contact listing</a>
 </div>
