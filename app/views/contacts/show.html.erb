@@ -1,6 +1,8 @@
 <div class="wrapper" id="wrapper">
 <h1><%= @contact.name %></h1>
 
+<% if @contact.phones.length > 0 %>
+
 <p>The following phone numbers belong to this person in the address book........</p>
 
 <ul>
@@ -11,10 +13,14 @@
       <a href="/contacts/<%= @contact.id %>/phones/<%= phone.id %>/destroy"
           data-confirm="Are you sure that you want to save this phone number the way that it is?"
           data-method="delete"
-          rel="nofollow">Delete this thing</a>
+          rel="nofollow">Delete</a>
   </li>
   <% end %>
 </ul>
+
+<% end %>
+
+<% if @contact.emails.length > 0 %>
 
 <p>The following email addresses belong to this person in the address book........</p>
 
@@ -26,20 +32,21 @@
       <a href="/contacts/<%= @contact.id %>/emails/<%= email.id %>/destroy"
           data-confirm="Are you sure that you want to save this email address the way that it is?"
           data-method="delete"
-          rel="nofollow">Delete this thing</a>
+          rel="nofollow">Delete</a>
   </li>
   <% end %>
 </ul>
+<% end %>
 
 
-<p><a href="/contacts/<%= @contact.id %>/edit">Edit</a></p>
-<p><a href="/contacts/<%= @contact.id %>"
+<p><a id="success_two" href="/contacts/<%= @contact.id %>/edit">Edit</a></p>
+<p><a id="success_two" href="/contacts/<%= @contact.id %>"
       data-confirm="You sure?"
       data-method="delete"
       rel="nofollow">Delete</a></p>
 
-<p><a href="/contacts/<%= @contact.id %>/phones/new">Add phone</a></p>
-<p><a href="/contacts/<%= @contact.id %>/emails/new">Add email</a></p>
+<p><a id="success" href="/contacts/<%= @contact.id %>/phones/new">Add phone</a></p>
+<p><a id="success" href="/contacts/<%= @contact.id %>/emails/new">Add email</a></p>
 
 <a href="/contacts" id="link" >Return to contact listing</a>
 </div>

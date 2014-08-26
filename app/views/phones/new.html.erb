@@ -11,6 +11,10 @@
 
 <form action="/contacts/<%= @phone.contact.id %>/phones" method="post">
   <label for="phone_number">Number</lebel>
-  <input id="phone_number" name="number" type="text" value="<%= @phone.number %>">
+  <input id="input_color" name="number" type="text" value="<%= @phone.number %>">
   <button>Add phone</button>
 </form>
+
+<p id="phone_two"><a href="/contacts">Return to contact listing</a></p>
+<p id="phone_two"><a href="/contacts/<%= @contact.id %>">Return to this contact</a></p>
+

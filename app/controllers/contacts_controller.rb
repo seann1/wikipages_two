@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+  def home
+    render('contacts/home.html.erb')
+  end
   def index
     @contacts = Contact.all
     render('contacts/index.html.erb')

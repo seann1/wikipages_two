@@ -1,11 +1,14 @@
 class EmailsController < ApplicationController
   def new
+    @contact = Contact.find(params[:contact_id])
     contact = Contact.find(params[:contact_id])
     @email = contact.emails.new
     render('emails/new.html.erb')
   end
 
   def create
+    @contact = Contact.find(params[:contact_id])
+
     @email = Email.new(:address => params[:address],
                        :contact_id => params[:contact_id])
 
@@ -18,11 +21,13 @@ class EmailsController < ApplicationController
 
   def edit
     @email = Email.find(params[:id])
+    @contact = Contact.find(@email.contact_id)
     render('emails/edit.html.erb')
   end
 
   def update
     @email = Email.find(params[:email_id])
+    @contact = Contact.find(@email.contact_id)
     if @email.update(:address => params[:address])
       render('emails/success.html.erb')
     else
@@ -31,9 +36,9 @@ class EmailsController < ApplicationController
   end
 
   def destroy
-    email_id = request.original_url.split('/')[6].to_i
-    @email = Email.where(id: email_id)
-    @email.first.destroy
+    @email = Email.find(params[:email_id])
+    @contact = Contact.find(@email.contact_id)
+    @email.destroy
     render('emails/destroy.html.erb')
   end
 end

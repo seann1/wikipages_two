@@ -2,17 +2,17 @@
 <h1>New contact</h1>
 
 <% if @contact.errors.any? %>
-  <h3>Please fix these errors:</h3>
+  <h3 id="errors">Please fix these errors:</h3>
   <ul>
     <% @contact.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+      <li id="errors"><%= message %></li>
     <% end %>
   </ul>
 <% end %>
 
 <form id="new" action="/contacts" method="post">
   <label for="contact-name">Name</label>
-  <input id="contact_name" name="name" type="text" value="<%= @contact.name %>">
+  <input id="input_color" name="name" type="text" value="<%= @contact.name %>">
   <button>Create Contact</button>
 </form>
 

@@ -42,7 +42,46 @@ p {
   font-size: 40px;
 }
 
+#errors {
+  color: orange;
+  font-size: 20px;
+
+}
+
+
+
+.brick_wall {
+  background:url(brick_wall.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  width: 40%;
+    height: 40%;
+    background: #444;
+    margin: 0 auto;
+}
+
 #phone {
+  background-color: #A3C9AB;
+  color: black;
+  font-size: 40px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+  transition: background-color 1s, border-radius 2s, color 3s;
+}
+
+#phone_contacts {
+  background-color: #A3C9AB;
+  color: black;
+  font-size: 40px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+  transition: background-color 1s, border-radius 2s, color 3s;
+}
+
+#phone_two {
   background-color: #A3C9AB;
   color: black;
   font-size: 40px;
@@ -62,8 +101,19 @@ p {
 }
 
 #phone:hover {
-  background-color: orange;
-  border-radius: 50%;
+  background-color: #24B4C7;
+  /*border-radius: 50%;*/
+  color: red;
+}
+
+#phone_contacts:hover {
+  background-color: #24B4C7;
+  border-radius: 20%;
+  color: red;
+}
+
+#phone_two:hover {
+  background-color: #9DE305;
   color: red;
 }
 
@@ -71,6 +121,7 @@ p {
   transition: background 1s, border-radius 1s, background-size 1s;
   font-size: 60px;
   width: 25%;
+  color: red;
 
 }
 
@@ -78,6 +129,17 @@ p {
   background:url(zebra.jpg);
   background-size: 30px 10px;
   border-radius: 50%;
+  color: blue;
+}
+
+#input_color {
+  background-color: #F0D000;
+  height: 3em;
+  transition: background-color 2s;
+}
+
+#input_color:hover {
+  background-color: #C294FF;
 }
 
 
@@ -110,38 +172,82 @@ button {
 #success{
   height: 100px;
   width: 100px;
-  animation: success 3s infinite alternate;
-  -webkit-animation: success 3s infinite alternate;
+  animation: success 4s infinite alternate;
+  -webkit-animation: success 4s infinite alternate;
   font-size: 30px;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: white;
+  color: black;
+
+}
+
+#success_two {
+  height: 100px;
+  width: 100px;
+  animation: success_two 2s infinite alternate;
+  -webkit-animation: success_two 2s infinite alternate;
+  font-size: 30px;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: black;
+  color: black;
 
 }
 
 @keyframes success {
-    0% {background: red;
+    0% {background: #82E8C4;
       width: 100px;
       height: 100px;}
     50% {
-      background: #ADFFF0;
+      background: #82DCE8;
       /*transform: rotate(20deg);*/
     }
-    100% {background: yellow;
+    100% {background: #40D0E3;
       width: 50px;
       height: 50px;
-      border-radius: 100%;}
+      }
 }
 
 @-webkit-keyframes success {
-    0% {background: red;
+    0% {background: #558fff;
       width: 100px;
       height: 100px;}
     50% {
       background: #ADFFF0;
       /*transform: rotate(20deg);*/
     }
-    100% {background: yellow;
+    100% {background: #82DCE8;
+      width: 50px;
+      height: 50px;}
+}
+
+@keyframes success_two {
+    0% {background: #84fc21;
+      width: 100px;
+      height: 100px;}
+    50% {
+      background: #558fff;
+      /*transform: rotate(20deg);*/
+    }
+    100% {background: #82DCE8;
       width: 50px;
       height: 50px;
-      border-radius: 100%;}
+      }
+}
+
+@-webkit-keyframes success_two {
+   0% {background: #A10B56;
+      width: 100px;
+      height: 100px;}
+    50% {
+      background: #58ffff;
+      /*transform: rotate(20deg);*/
+    }
+    100% {background: #C9FC5B;
+      width: 50px;
+      height: 50px;
+      }
 }
 
 @font-face {
@@ -157,7 +263,7 @@ button {
 #footer {
   height: 270px;
   width: 100%;
-  background: url(sandman.jpg);
+  background-color:#7FDBFF;
   background-size: 200px 200px;
   position: absolute;
   top: 70%;

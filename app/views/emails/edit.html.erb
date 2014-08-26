@@ -12,6 +12,10 @@
 <form action="." method="post">
   <input name="_method" type="hidden" value="patch">
   <label for="address">New Email Address</label>
-  <input id="phone_number" name="address" type="text" value="<%= @email.address %>">
+  <input id="input_color" id="phone_number" name="address" type="text" value="<%= @email.address %>">
   <button>Press the button to add the email address</button>
 </form>
+
+<p id="phone_two"><a href="/contacts">Return to contact listing</a></p>
+<p id="phone_two"><a href="/contacts/<%= @contact.id %>">Return to this contact</a></p>
+

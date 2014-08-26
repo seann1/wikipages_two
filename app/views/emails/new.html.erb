@@ -11,6 +11,9 @@
 
 <form action="/contacts/<%= @email.contact.id %>/emails" method="post">
   <label for="email_address">Address</lebel>
-  <input id="email_address" name="address" type="text" value="<%= @email.address %>">
+  <input id="input_color" name="address" type="text" value="<%= @email.address %>">
   <button>Add email</button>
 </form>
+
+<p id="phone_two"><a href="/contacts">Return to contact listing</a></p>
+<p id="phone_two"><a href="/contacts/<%= @contact.id %>">Return to this contact</a></p>
